@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "FlowMusic 导演台 · 自动桥接助手",
+  "version": "1.0.0",
+  "description": "将本地 FlowMusic 导演台 (http://127.0.0.1:3888) 的黄金配乐 SOP 指令自动同步到 Google Flow Music 右侧 Compose 纯音乐面板。",
+  "permissions": [],
+  "host_permissions": [
+    "https://www.flowmusic.app/*",
+    "http://127.0.0.1:3888/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.flowmusic.app/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
